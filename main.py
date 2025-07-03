@@ -49,11 +49,11 @@ if process_url_clicked:
         google_api_key = st.secrets["geminiapi_key"]
         # google_api_key = geminiapi_key
     )
-    vectorstore_openai = FAISS.from_documents(docs, embeddings)
+    vectorstore = FAISS.from_documents(docs, embeddings)
     main_placeholder.text("Embedding Vector Started Building...✅✅✅")
     time.sleep(2)
 
-    vectorstore_openai.save_local("faiss_index")
+    vectorstore.save_local("faiss_index")
 
 if query:
     if os.path.exists("faiss_index"):

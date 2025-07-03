@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import time
 
-# from google.api_core.exceptions import ResourceExhausted
+from google.api_core.exceptions import ResourceExhausted
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -79,8 +79,7 @@ if query:
                 sources_list = sources.split("\n")
                 for source in sources_list:
                     st.write(source)
-        # except ResourceExhausted:
-        except Exception as e:
+        except ResourceExhausted:
             st.error("🚫 API quota exceeded. Please check your Gemini API usage or try again later.")
 
 

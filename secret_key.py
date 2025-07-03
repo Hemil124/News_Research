@@ -1,1 +1,1 @@
-geminiapi_key = "AIzaSyCEILLCdi6soC4OP8M0IjGwOQeI9KWgEEI"
+geminiapi_key = "Replace with your key"

@@ -12,7 +12,7 @@ from langchain.vectorstores import FAISS
 from secret_key import geminiapi_key
 
 
-# os.environ['google_api_key'] = geminiapi_key
+os.environ['google_api_key'] = geminiapi_key
 
 st.title("PopatlalBot: News Research Tool 📈")
 st.sidebar.title("News Article URLs")
@@ -59,7 +59,7 @@ if query:
     if os.path.exists("faiss_index"):
         embeddings = GoogleGenerativeAIEmbeddings(
             model="models/embedding-001",
-            google_api_key=geminiapi_key
+            # google_api_key=geminiapi_key
         )
         vectorstore = FAISS.load_local(
             "faiss_index",

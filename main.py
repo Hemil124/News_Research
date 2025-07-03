@@ -59,6 +59,7 @@ if query:
     if os.path.exists("faiss_index"):
         embeddings = GoogleGenerativeAIEmbeddings(
             model="models/embedding-001",
+            google_api_key = st.secrets["geminiapi_key"]
             # google_api_key=geminiapi_key
         )
         vectorstore = FAISS.load_local(

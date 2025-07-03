@@ -12,7 +12,7 @@ from langchain.vectorstores import FAISS
 from secret_key import geminiapi_key
 
 
-os.environ['google_api_key'] = geminiapi_key
+# os.environ['google_api_key'] = geminiapi_key
 
 st.title("PopatlalBot: News Research Tool 📈")
 st.sidebar.title("News Article URLs")

@@ -79,7 +79,8 @@ if query:
                 sources_list = sources.split("\n")
                 for source in sources_list:
                     st.write(source)
-        except ResourceExhausted:
+        # except ResourceExhausted:
+        except Exception as e:
             st.error("🚫 API quota exceeded. Please check your Gemini API usage or try again later.")
 
 

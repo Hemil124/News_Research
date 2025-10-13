@@ -15,7 +15,7 @@ from secret_key import geminiapi_key
 
 os.environ['google_api_key'] = geminiapi_key
 
-st.title("InfoDigger — Explore, analyze, and understand any web content with AI")
+st.title("InfoDigger — AI Research & Insight Tool")
 st.sidebar.title("Web Content URLs")
 
 urls = []

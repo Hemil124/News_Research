@@ -15,7 +15,7 @@ from secret_key import geminiapi_key
 
 os.environ['google_api_key'] = geminiapi_key
 
-st.title("PopatlalBot: News Research Tool 📈")
+st.title("InfoDigger — Digs deep into web articles")
 st.sidebar.title("News Article URLs")
 
 urls = []
